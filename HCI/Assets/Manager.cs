@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Manager : MonoBehaviour
+public class Manager : MonoBehaviour 
 {
 
     //element 1 ==> Sol1
@@ -162,16 +163,23 @@ public class Manager : MonoBehaviour
 
 
 
-    public void Update()
+     void Update()
     {
-
-        if (sol1_Correct && sol2_Correct == true)
+        if (sol1_Correct && sol2_Correct)
         {
-
-            Debug.Log("win");
-
+            Debug.Log("Win");
+            Game_win();
         }
+    }
 
+    public Win_Meun winMenu;
+
+    public void Game_win()
+    {
+        if (winMenu != null)
+        {
+            winMenu.Setup(); // Activate the Win_Meun GameObject
+        }
     }
 
 }
