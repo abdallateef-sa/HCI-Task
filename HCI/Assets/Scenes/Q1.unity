@@ -2220,7 +2220,7 @@ GameObject:
   - component: {fileID: 1111219808}
   m_Layer: 0
   m_Name: o
-  m_TagString: Untagged
+  m_TagString: A_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4266,6 +4266,10 @@ PrefabInstance:
     - target: {fileID: 7156262841905727289, guid: e45daf06cc21c9f49859ac269b1d8e8d, type: 3}
       propertyPath: m_Name
       value: answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156262841905727289, guid: e45daf06cc21c9f49859ac269b1d8e8d, type: 3}
+      propertyPath: m_TagString
+      value: "\u064Dsol_1"
       objectReference: {fileID: 0}
     - target: {fileID: 7904027277534307111, guid: e45daf06cc21c9f49859ac269b1d8e8d, type: 3}
       propertyPath: m_Enabled
