@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Manager : MonoBehaviour 
+public class Manager : MonoBehaviour
 {
 
     //element 1 ==> Sol1
@@ -162,14 +162,26 @@ public class Manager : MonoBehaviour
     }
 
 
-
-     void Update()
+    private bool scoreIncreased = false; // تحقق من أن النقاط تم زيادتها بالفعل
+    void Update()
     {
         if (sol1_Correct && sol2_Correct)
         {
-            Debug.Log("Win");
+            // Debug.Log("Win");
             Game_win();
+            if (scoreIncreased == false)
+            {
+                Score_Script.scoreCount += 1;
+                scoreIncreased = true;
+            }
+
+
         }
+    }
+
+    private void ResetScore()
+    {
+        scoreIncreased = false; // إعادة تعيين المتغير عندما يتم إعادة بدء اللعبة
     }
 
     public Win_Meun winMenu;
@@ -181,5 +193,8 @@ public class Manager : MonoBehaviour
             winMenu.Setup(); // Activate the Win_Meun GameObject
         }
     }
+
+
+
 
 }

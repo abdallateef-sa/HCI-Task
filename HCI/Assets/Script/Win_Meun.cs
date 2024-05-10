@@ -53,13 +53,14 @@ public class Win_Meun : MonoBehaviour
         // فتح الرابط URL عن طريق المتصفح الافتراضي
         Application.OpenURL(url);
     }
-    
+
     public void Load_Home_Screne(string Home_Name)
     {
         SceneManager.LoadScene(Home_Name);
+        Score_Script.scoreCount = 0;
     }
 
-      public void Start_Game(string first_level)
+    public void Start_Game(string first_level)
     {
         SceneManager.LoadScene(first_level);
     }
